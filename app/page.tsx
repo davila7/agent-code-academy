@@ -70,8 +70,14 @@ export default function Home() {
                   tabIndex={index < agents.length ? 0 : -1}
                   className="logo-mark"
                 >
-                  <img src={agent.logo} alt="" className="h-10 w-auto max-w-16 object-contain sm:h-12 sm:max-w-20" />
-                  <span className="sr-only">{agent.label}</span>
+                  <span className="grid h-12 place-items-center sm:h-14">
+                    <img
+                      src={agent.logo}
+                      alt=""
+                      className={`w-auto object-contain ${agent.id === 'codex' ? 'h-11 sm:h-12' : 'h-9 max-w-16 sm:h-11 sm:max-w-20'}`}
+                    />
+                  </span>
+                  <span className="logo-label">{agent.label}</span>
                 </button>
               ))}
             </div>

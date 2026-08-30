@@ -13,7 +13,8 @@ body { margin: 0; min-height: 100vh; background: var(--background); color: var(-
 .logo-marquee { width: 100%; overflow: hidden; mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
 .logo-marquee-track { display: flex; width: max-content; align-items: center; animation: logo-marquee 24s linear infinite; }
 .logo-marquee:hover .logo-marquee-track, .logo-marquee:focus-within .logo-marquee-track { animation-play-state: paused; }
-.logo-mark { display: grid; width: clamp(8rem, 16vw, 12rem); height: 5.5rem; flex: none; place-items: center; border: 0; background: transparent; opacity: .38; filter: grayscale(1) brightness(2); transition: opacity .2s ease, transform .2s ease; cursor: pointer; }
+.logo-mark { display: flex; width: clamp(8rem, 16vw, 12rem); height: 7rem; flex: none; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; border: 0; background: transparent; opacity: .42; filter: grayscale(1) brightness(2); transition: opacity .2s ease, transform .2s ease; cursor: pointer; }
 .logo-mark:hover, .logo-mark:focus-visible, .logo-mark[aria-pressed='true'] { opacity: 1; transform: scale(1.08); outline: none; }
+.logo-label { color: rgb(255 255 255 / .72); font-family: var(--font-geist-mono); font-size: .59rem; font-weight: 500; letter-spacing: .08em; line-height: 1; text-transform: uppercase; white-space: nowrap; }
 @keyframes logo-marquee { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
