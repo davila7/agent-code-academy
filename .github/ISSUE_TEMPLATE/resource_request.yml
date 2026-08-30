@@ -1,0 +1,38 @@
+name: Resource request
+description: Suggest a technical course or learning resource for the catalog.
+title: '[Resource]: '
+labels: [catalog]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Source URL
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Coding agent
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - GitHub Copilot
+        - Antigravity
+        - Pi
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why should it be included?
+      description: Describe the technical skills or workflow it teaches.
+    validations:
+      required: true
